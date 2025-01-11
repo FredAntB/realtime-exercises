@@ -33,7 +33,7 @@ async function postNewMsg(user, text) {
 
 async function getNewMsgs() {
   let reader;
-  const uf8Decoder = new TextDecoder("utf-8");
+  const utf8Decoder = new TextDecoder("utf-8");
   try {
     const res = await fetch("/msgs");
     reader = res.body.getReader();
